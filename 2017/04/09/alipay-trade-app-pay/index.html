@@ -1,0 +1,324 @@
+<!-- Critical Error: can not find object at line NAN. -->
+<!DOCTYPE html>
+<script type="text/javascript">
+    if (document.readyState === "loading") {  // loading, interactive, complete
+      if('xiaotian044500.github.io' === location.hostname && 'https:' != location.protocol){
+        location.href = 'https://xiaotian044500.github.io'
+      }
+    }
+</script>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>alipay.trade.app.pay | Enjoy life, enjoy coding.</title>
+  <meta name="keywords" content="xt044500,xiaotian044500"></meta>
+  <meta name="description" content="xiaotian044500的奋斗史, xiaotian044500的博客"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="阿里金服 app支付 服务端(PHP)接口开发summary:    从 开放平台&amp;gt;文档中心&amp;gt;快速接入 大致了解支付流程. 1.客户端选购商品, 提交商品信息到服务端(Client-&amp;gt;[{商品1,1件,￥100},{商品1,1件,￥100}]-&amp;gt;Server) 2.服务端订单入库生成订单号反馈给客户端(Server-&amp;gt;[2333333,￥200]-&amp;gt;Clien">
+<meta name="keywords" content="alibaba,alipay,app.pay,bobbing-sort,fast-sort,RSA,Tree,对称加密,秘钥,非对称加密,公钥&#x2F;私钥,莫尔斯密码,质数,PHi,I&#39;m fine EQ emoen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="alipay.trade.app.pay">
+<meta property="og:url" content="https://xiaotian044500.github.io/2017/04/09/alipay-trade-app-pay/index.html">
+<meta property="og:site_name" content="Enjoy life, enjoy coding.">
+<meta property="og:description" content="阿里金服 app支付 服务端(PHP)接口开发summary:    从 开放平台&amp;gt;文档中心&amp;gt;快速接入 大致了解支付流程. 1.客户端选购商品, 提交商品信息到服务端(Client-&amp;gt;[{商品1,1件,￥100},{商品1,1件,￥100}]-&amp;gt;Server) 2.服务端订单入库生成订单号反馈给客户端(Server-&amp;gt;[2333333,￥200]-&amp;gt;Clien">
+<meta property="og:locale" content="diy">
+<meta property="og:image" content="https://xiaotian044500.github.io/images/markDown/rsa-tool-rule-1.png">
+<meta property="og:image" content="https://xiaotian044500.github.io/images/markDown/rsa-tool-rule-2.png">
+<meta property="og:updated_time" content="2017-09-04T15:44:40.261Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="alipay.trade.app.pay">
+<meta name="twitter:description" content="阿里金服 app支付 服务端(PHP)接口开发summary:    从 开放平台&amp;gt;文档中心&amp;gt;快速接入 大致了解支付流程. 1.客户端选购商品, 提交商品信息到服务端(Client-&amp;gt;[{商品1,1件,￥100},{商品1,1件,￥100}]-&amp;gt;Server) 2.服务端订单入库生成订单号反馈给客户端(Server-&amp;gt;[2333333,￥200]-&amp;gt;Clien">
+<meta name="twitter:image" content="https://xiaotian044500.github.io/images/markDown/rsa-tool-rule-1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Enjoy life, enjoy coding." type="application/atom+xml">
+  
+  
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="javascript:void(0);" id="logo" style="cursor:default">Enjoy life, enjoy coding.</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="javascript:void(0);" id="subtitle" style="cursor:default">时间在我们每个人身上所沉淀的都是我们自己选择的</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="https://wakatime.com/">Wakatime</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://xiaotian044500.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+<div id="utility-bar" class="utility-bar" style="position: fixed;top:0;width:100%;">
+  <div class="container">
+    <div class="pull-left">
+      <a id="j-show-text" href="javascript:void(0);" class="signup-button btn btn-success btn-md mf-listen">Use Auth0 for Free</a>
+    </div>
+  </div>
+</div>
+      <div class="outer">
+        <section id="main"><article id="post-alipay-trade-app-pay" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/09/alipay-trade-app-pay/" class="article-date">
+  <time datetime="2017-04-09T09:30:28.000Z" itemprop="datePublished">2017-04-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/alipay/">alipay</a>►<a class="article-category-link" href="/categories/alipay/app-pay/">app.pay</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      alipay.trade.app.pay
+    </h1>
+  
+
+      </header>
+    
+    <div class="post-meta">
+      <span class="post-count">阅读预计 7 分钟</span>
+      <span class="post-count"> &nbsp; | &nbsp;约 1,774 字 &nbsp; </span>
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="阿里金服-app支付-服务端-PHP-接口开发"><a href="#阿里金服-app支付-服务端-PHP-接口开发" class="headerlink" title="阿里金服 app支付 服务端(PHP)接口开发"></a>阿里金服 app支付 服务端(PHP)接口开发</h2><p><strong>summary:</strong><br>    从 <code>开放平台&gt;文档中心&gt;快速接入</code> 大致了解支付流程.</p>
+<pre><code>1.客户端选购商品, 提交商品信息到服务端(Client-&gt;[{商品1,1件,￥100},{商品1,1件,￥100}]-&gt;Server)
+2.服务端订单入库生成订单号反馈给客户端(Server-&gt;[2333333,￥200]-&gt;Client), 更详细描述是: 服务端生成订单后 调用(支付宝服务端)SDK进行RSA2(or RSA)加密
+3.客户端调用(支付宝客户端)SDK携带一些参数(app_id, ..., notify_url, ..., sign 等10个参数)请求支付宝服务器
+4.用户支付完成, 支付宝服务器__异步__通知应用服务器(HTTP(or HTTPS)访问http://domain/notify_url), 服务器做验证判断支付是否成功并处理业务逻辑
+5.支付完成后, 回到APP, APP收到通知, 访问服务器接口验证支付是否成功.
+</code></pre><a id="more"></a>
+<p><strong>按照官方Docs来</strong><br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">STRUCTION:</div><div class="line"></div><div class="line"> - alibaba_pay.php  // app支付接口, 用于将加签(RSA2加密)后的订单信息返回给app(, 之后由app将信息通过app-sdk发送给支付宝, 支付包进行支付处理, 将处理结果同步返回app端并异步通知服务端[即`setNotifyUrl`]).</div><div class="line"> - alipay-sdk-PHP-20170307171629  // alibaba server pay sdk</div><div class="line">     - AopSdk.php  // sdk 调用入口文件</div><div class="line">     - aop</div><div class="line">         - AopClient.php  // 这里修改了sdk部分代码, 1: 去掉了sdk中返回的`alipay_sdk`参数, 2: sdk在格式化时间戳时将空格转义为+号, 这里通过rawurlencode偷偷换成%20</div><div class="line"> - api</div><div class="line">     - ext</div><div class="line">         - app_v2.0</div><div class="line">             - receive_notify.php  // 支付宝 异步通知 服务器的地址</div></pre></td></tr></table></figure></p>
+<p><strong>开发中遇到的问题</strong></p>
+<ul>
+<li><p>ALI3171 交易状态错误<br>原因之一: 订单信息重复. 在开发过程进行签名校对的时候, 把订单信息写死了, 后续开发需要更换新订单.</p>
+</li>
+<li><p>ALI38173<br>原因之一: 发给app(android)的字符串app端是不需要url_decode的, 直接转给支付宝.</p>
+</li>
+<li><p>ALI40247<br>原因之一: 添加了<code>APP支付</code>功能, 但是未签约.</p>
+</li>
+<li><p>生产环境(PHP5.3, A) 无法运行 app支付SDK<br>方案B: 另开一台(PHP5.5+, B)服务器, 生产环境(不处理app支付)仅将请求转发给B并将请求结果返回. 类似于反向代理, 对移动端来说, 他们仍然访问的是A(B对他们来讲是不存在的).</p>
+</li>
+</ul>
+<p><strong>注意点</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">0x00. 几个概念要先明确</div><div class="line">    1. 应用服务商(即我们)是有一个RSA秘钥对的(简称Y), 需要告知支付宝Y-公钥.</div><div class="line">    2. Y-私钥用来加密订单信息, 这样支付宝用Y-公钥解密的时候可以__确认我是就我__.</div><div class="line">    3. 支付宝也有一个RSA秘钥对(简称Z), 需要告知我们Z-公钥.</div><div class="line">    4. Z-私钥用来加密支付宝返回给我们的订单支付信息, 这样我们用Z-公钥解密的时候可以__确认这货确实是支付宝, 不是骗子__.</div><div class="line">0x01. 当前版本(alipay-sdk-PHP-20170307171629) 需要PHP5.5+, 开发必须要用公网地址</div><div class="line">0x02. 服务端SDK已经封装的很简单了, 不用关心什么10个参数必须有还必须字母曾序排列, url_encode转码必须是所有一级value什么的.</div><div class="line">0x03. RSA签名验签工具 用来生产RSA2秘钥对, 加签验签. 我们选的生成秘钥方式是PKCS1 2048</div><div class="line">0x04. 调试过程中没少遇到 ALI38173, ALI40247. 开发文档上的排查思路并没有多大用处.</div><div class="line">0x05. 支付流程(沙箱模式)测试完成. 确认问题为: 发给app(android)的字符串app端是不需要url_decode的, 直接转给支付宝就可以了</div><div class="line">0x06. 沙箱模式 调式 app支付 仅支持android(不支持iOS)</div><div class="line">0x07. 线上测试 需要 在 管理中心 &gt; 开发者中心 &gt; 我的应用 &gt; APP支付(签约, &quot;状态&quot;为`生效`), 并且 应用状态 由`开发中` 经 `提交审核` 至 `应用上线` 方可.</div></pre></td></tr></table></figure></p>
+<hr>
+<p><img src="/images/markDown/rsa-tool-rule-1.png" alt="rsa-tool-rule-1" title="rsa-tool-rule-1"><br><img src="/images/markDown/rsa-tool-rule-2.png" alt="rsa-tool-rule-2" title="rsa-tool-rule-2"></p>
+<hr>
+<h2 id="技术点"><a href="#技术点" class="headerlink" title="技术点"></a>技术点</h2><h4 id="非对称加密RSA"><a href="#非对称加密RSA" class="headerlink" title="非对称加密RSA"></a>非对称加密RSA</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">m^1 % n === m  // step 1</div><div class="line">1 === ed  // step 2, e为公钥, d为私钥</div></pre></td></tr></table></figure>
+<hr>
+<p>附录:</p>
+<pre><code>网上查询的一些概念, 不一定准确, 参考一下.
+---
+
+- 0x00 交易系统 vs 支付系统: 交易是生成订单；支付是对订单进行付款
+- 0x01 支付分类
+    - 单次支付: 支付验证要素（卡号、密码、手机号、CVN2、CVV2等），结合安全认证（例如短信验证码），让持卡人完成互联网支付。
+    - 认证支付: 指用户在绑卡时，将卡信息提供给电商。这样在支付时，用户无需再输入这些信息，由电商在服务器侧保留用户的账户信息，比如身份证号，卡号，手机号。在用户支付时，无需再输入这些内容，最多就提供个密码或者校验码，就可以完成支付。这基本不会打断用户的使用体验，所以也是电商喜欢的支付方式。但认证支付最让人诟病的就是安全性。一方面需要向电商暴露个人信息，一旦被窃取，资金就容易被盗走。还有在手机上执行支付，一旦手机丢失，窃取者就可以轻而易举的使用或者转移资金。
+    - 快捷支付: 快捷支付和认证支付类似，不同点在于绑卡之后，有些银行接口会返回token，后续使用token来作为支付凭证，无需提供卡号信息，这样电商也不需要本地保留卡号了。目前主要是银联有提供token接口。
+    - 网银支付: 相对来说，网银支付要安全很多。网银支付是由银联或者银行提供支付界面，用户必须在页面上输入卡号，密码等验证信息才可以执行支付。大部分银行还要求用户使用U盾或者其它安全硬件。但安全和易用永远是个矛盾。网银使用会打断用户体验，增加用户使用难度。对使用硬件加密的支付，不可能天天带着U盘跑。另外网银主要用在web端，在手机端，嵌入网银页面，还是比较难看的
+- 0x02 蚂蚁金服 沙箱模式:
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">商家信息</div><div class="line">    商家账号 xxxxxxxxxx@sandbox.com</div><div class="line">    商户UID  20880123456789ab</div><div class="line">    登录密码 111111</div><div class="line">买家信息</div><div class="line">    买家账号 yyyyyyyyyy@sandbox.com</div><div class="line">    登录密码 111111</div><div class="line">    支付密码 111111</div><div class="line">    用户名称 沙箱环境</div><div class="line">    证件类型 身份证(IDENTITY_CARD)</div><div class="line">    证件号码 0123456789abcdefff</div></pre></td></tr></table></figure>
+
+- 0x03 蚂蚁金服
+    - 当面付
+    - 支付宝收款
+    - app支付
+    - 手机网站支付
+
+异步通知POST数据
+---
+// 格式化 POST参数, 沙箱模式
+{
+    &quot;total_amount&quot;: &quot;0.01&quot;,
+    &quot;buyer_id&quot;: &quot;2088102170XXXXXX&quot;,
+    &quot;trade_no&quot;: &quot;2017041321001004770200YYYYYY&quot;,
+    &quot;body&quot;: &quot;cece_body&quot;,
+    &quot;notify_time&quot;: &quot;2017-04-13 10:29:35&quot;,
+    &quot;subject&quot;: &quot;cece_subject&quot;,
+    &quot;sign_type&quot;: &quot;RSA2&quot;,
+    &quot;buyer_logon_id&quot;: &quot;scc***@sandbox.com&quot;,
+    &quot;auth_app_id&quot;: &quot;2016080400ZZZZZZ&quot;,
+    &quot;charset&quot;: &quot;UTF-8&quot;,
+    &quot;notify_type&quot;: &quot;trade_status_sync&quot;,
+    &quot;invoice_amount&quot;: &quot;0.01&quot;,
+    &quot;out_trade_no&quot;: &quot;cece2017032813021492LLLLLL&quot;,
+    &quot;trade_status&quot;: &quot;TRADE_SUCCESS&quot;,
+    &quot;gmt_payment&quot;: &quot;2017-04-13 10:29:34&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;point_amount&quot;: &quot;0.00&quot;,
+    &quot;sign&quot;: &quot;G\/VfEEogUZptu11pJhM6EQdWZnvvtFC7h+SSnoyWoM6NgEVRZrC9zkrcRlA76gsNtPZ\/NgTtyf8g5COjg5bYKP7nVCVShnqlMsKNAKiSPJpBQWhZqMJUAMAyHDe1wggeeFEBNTBt5epYFsuQ0WrhsfWETXHed59IlXuH\/2P4pgm05yJrUwNJThqu1TTMuqC+40vbib1NOMtrTQvGgpG3oTkjhf1GpCnod3bbziNYKrShCeq+PoL2FeW+wlw+KYVo0pkguxdkL3P1fKiJAq1B\/H7cvB\/MNMuLgH87GWkxvb6hBAUjnLt16AAjDcleRxhjw8Y\/ny+yqB8lGV9W5UouxA==&quot;,
+    &quot;gmt_create&quot;: &quot;2017-04-13 10:29:33&quot;,
+    &quot;buyer_pay_amount&quot;: &quot;0.01&quot;,
+    &quot;receipt_amount&quot;: &quot;0.01&quot;,
+    &quot;fund_bill_list&quot;: &quot;[{\&quot;amount\&quot;:\&quot;0.01\&quot;,\&quot;fundChannel\&quot;:\&quot;ALIPAYACCOUNT\&quot;}]&quot;,
+    &quot;app_id&quot;: &quot;2016080400MMMMMM&quot;,
+    &quot;seller_id&quot;: &quot;2088102169NNNNNN&quot;,
+    &quot;notify_id&quot;: &quot;1269bf930d3fb2fdb39f7eb5ac04OOOOOO&quot;,
+    &quot;seller_email&quot;: &quot;gylh******@sandbox.com&quot;
+}
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://xiaotian044500.github.io/2017/04/09/alipay-trade-app-pay/" data-id="cj7r2cqa0000zxbmrsfl1kkfr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/I-m-fine-EQ-emoen/">I'm fine EQ emoen</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHi/">PHi</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RSA/">RSA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tree/">Tree</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/alibaba/">alibaba</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/alipay/">alipay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app-pay/">app.pay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bobbing-sort/">bobbing-sort</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fast-sort/">fast-sort</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/公钥-私钥/">公钥/私钥</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/对称加密/">对称加密</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/秘钥/">秘钥</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/莫尔斯密码/">莫尔斯密码</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/质数/">质数</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/非对称加密/">非对称加密</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/09/generate-order-sn/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          generate-order_sn
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/09/hexo-github-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo github blog</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+        <a href="/tags/github-io-git/" style="font-size: 13px; color: #39aad4">.github.io.git</a> <a href="/tags/Chrome/" style="font-size: 13px; color: #39aad4">Chrome</a> <a href="/tags/Elasticsearch/" style="font-size: 13px; color: #39aad4">Elasticsearch</a> <a href="/tags/FIFO/" style="font-size: 13px; color: #39aad4">FIFO</a> <a href="/tags/Gitblit/" style="font-size: 13px; color: #39aad4">Gitblit</a> <a href="/tags/Hexo/" style="font-size: 35px; color: #39aad4">Hexo</a> <a href="/tags/Laravel/" style="font-size: 13px; color: #39aad4">Laravel</a> <a href="/tags/Laravel-Homestead/" style="font-size: 13px; color: #39aad4">Laravel Homestead</a> <a href="/tags/Lightweight-Markup-Language/" style="font-size: 13px; color: #39aad4">Lightweight Markup Language</a> <a href="/tags/MersenneTwister/" style="font-size: 13px; color: #39aad4">MersenneTwister</a> <a href="/tags/NoSQL/" style="font-size: 13px; color: #39aad4">NoSQL</a> <a href="/tags/PIL/" style="font-size: 13px; color: #39aad4">PIL</a> <a href="/tags/Python/" style="font-size: 35px; color: #39aad4">Python</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul id="accordion" class="accordion"><li data-tree="0" data-cat_path="Business/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Business/">Business</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="Business/order/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Business/order/">order</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="Hexo/" data-article_count="2"><div class="link"><i class="fa"></i><a " href="/categories/Hexo/">Hexo</a><i class="fa fa-chevron-down"></i></div></li><li data-tree="0" data-cat_path="Laravel/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Laravel/">Laravel</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="Laravel/Laravel-Homestead/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Laravel/Laravel-Homestead/">Laravel Homestead</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="Luence/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Luence/">Luence</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="Luence/solr/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Luence/solr/">solr</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="MarkDown/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/MarkDown/">MarkDown</a><i class="fa fa-chevron-down"></i></div></li><li data-tree="0" data-cat_path="Python/" data-article_count="3"><div class="link"><i class="fa"></i><a " href="/categories/Python/">Python</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="Python/GIL/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Python/GIL/">GIL</a><i class="fa"></i></div></li><li data-tree="1" data-cat_path="Python/PEPs/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Python/PEPs/">PEPs</a><i class="fa"></i></div><ul class="submenu"><li data-tree="2" data-cat_path="Python/PEPs/PEP8/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Python/PEPs/PEP8/">PEP8</a><i class="fa"></i></div></li></ul></li><li data-tree="1" data-cat_path="Python/Scrapy/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Python/Scrapy/">Scrapy</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="Redis/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Redis/">Redis</a><i class="fa fa-chevron-down"></i></div></li><li data-tree="0" data-cat_path="alipay/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/alipay/">alipay</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="alipay/app-pay/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/alipay/app-pay/">app.pay</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="chrome/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/chrome/">chrome</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="chrome/chrome-plugins/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/chrome/chrome-plugins/">chrome plugins</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="git/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/git/">git</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="git/Gitblit/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/git/Gitblit/">Gitblit</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="javascript/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/javascript/">javascript</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="javascript/json/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/javascript/json/">json</a><i class="fa"></i></div></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 XT044500<br>
+      Powered by <a href="http://hexo.io/" target="_blank" rel="noopener">Hexo</a><br>
+        <div id="ext_busuanzi" style="display: none;">
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+            </span>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="https://wakatime.com/" class="mobile-nav-link">Wakatime</a>
+  
+</nav>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox-min.css">
+  <script src="/fancybox/jquery.fancybox.pack-min.js"></script>
+
+
+<script src="/js/script-min.js"></script>
+<script src="/js/granule-min.js"></script>
+<script src="/js/require-min.js"></script>
+<script src="/js/category_demo-min.js"></script>
+
+
+
+<script async src="/js/canvas_index-min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105815046-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!-- Critical Error: can not find object at line NAN. -->
+<!DOCTYPE html>
+<script type="text/javascript">
+    if (document.readyState === "loading") {  // loading, interactive, complete
+      if('xiaotian044500.github.io' === location.hostname && 'https:' != location.protocol){
+        location.href = 'https://xiaotian044500.github.io'
+      }
+    }
+</script>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>solr | Enjoy life, enjoy coding.</title>
+  <meta name="keywords" content="xt044500,xiaotian044500"></meta>
+  <meta name="description" content="xiaotian044500的奋斗史, xiaotian044500的博客"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="搜索模块-改版计划(任务) 0. 为增强关键词的搜索效率, 重做搜索模块, 整个任务细分为以下几点: 技术选型 Luence, solr, elasticSearch 安装部署 solr, windows 测试基础功能 MySQL导入, 基础搜索行为测试 增量更新/全量更新/删除 索引 编写定时器脚本 python">
+<meta name="keywords" content="solr,Luence,Elasticsearch,排序抖动,多轮排序&#x2F;单轮排序,数据音噪比,增量更新,全量更新,搜索">
+<meta property="og:type" content="article">
+<meta property="og:title" content="solr">
+<meta property="og:url" content="https://xiaotian044500.github.io/2017/07/26/solr/index.html">
+<meta property="og:site_name" content="Enjoy life, enjoy coding.">
+<meta property="og:description" content="搜索模块-改版计划(任务) 0. 为增强关键词的搜索效率, 重做搜索模块, 整个任务细分为以下几点: 技术选型 Luence, solr, elasticSearch 安装部署 solr, windows 测试基础功能 MySQL导入, 基础搜索行为测试 增量更新/全量更新/删除 索引 编写定时器脚本 python">
+<meta property="og:locale" content="diy">
+<meta property="og:updated_time" content="2017-09-04T15:34:08.062Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="solr">
+<meta name="twitter:description" content="搜索模块-改版计划(任务) 0. 为增强关键词的搜索效率, 重做搜索模块, 整个任务细分为以下几点: 技术选型 Luence, solr, elasticSearch 安装部署 solr, windows 测试基础功能 MySQL导入, 基础搜索行为测试 增量更新/全量更新/删除 索引 编写定时器脚本 python">
+  
+    <link rel="alternate" href="/atom.xml" title="Enjoy life, enjoy coding." type="application/atom+xml">
+  
+  
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="javascript:void(0);" id="logo" style="cursor:default">Enjoy life, enjoy coding.</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="javascript:void(0);" id="subtitle" style="cursor:default">时间在我们每个人身上所沉淀的都是我们自己选择的</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="https://wakatime.com/">Wakatime</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://xiaotian044500.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+<div id="utility-bar" class="utility-bar" style="position: fixed;top:0;width:100%;">
+  <div class="container">
+    <div class="pull-left">
+      <a id="j-show-text" href="javascript:void(0);" class="signup-button btn btn-success btn-md mf-listen">Use Auth0 for Free</a>
+    </div>
+  </div>
+</div>
+      <div class="outer">
+        <section id="main"><article id="post-solr" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/26/solr/" class="article-date">
+  <time datetime="2017-07-26T15:59:23.000Z" itemprop="datePublished">2017-07-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Luence/">Luence</a>►<a class="article-category-link" href="/categories/Luence/solr/">solr</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      solr
+    </h1>
+  
+
+      </header>
+    
+    <div class="post-meta">
+      <span class="post-count">阅读预计 8 分钟</span>
+      <span class="post-count"> &nbsp; | &nbsp;约 1,462 字 &nbsp; </span>
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h5 id="搜索模块-改版计划-任务"><a href="#搜索模块-改版计划-任务" class="headerlink" title="搜索模块-改版计划(任务)"></a>搜索模块-改版计划(任务)</h5><p><br></p>
+<h4 id="0-为增强关键词的搜索效率-重做搜索模块-整个任务细分为以下几点"><a href="#0-为增强关键词的搜索效率-重做搜索模块-整个任务细分为以下几点" class="headerlink" title="0. 为增强关键词的搜索效率, 重做搜索模块, 整个任务细分为以下几点:"></a>0. 为增强关键词的搜索效率, 重做搜索模块, 整个任务细分为以下几点:</h4><ul>
+<li>技术选型 Luence, <strong>solr</strong>, elasticSearch</li>
+<li>安装部署 solr, windows</li>
+<li>测试基础功能 MySQL导入, 基础搜索行为测试</li>
+<li>增量更新/全量更新/删除 索引</li>
+<li>编写定时器脚本 python<a id="more"></a></li>
+<li>编写应用接口 php</li>
+<li>编写业务逻辑 php</li>
+<li>迭代</li>
+</ul>
+<hr>
+<h4 id="1-技术选型"><a href="#1-技术选型" class="headerlink" title="1. 技术选型"></a>1. 技术选型</h4><ul>
+<li>solr<ul>
+<li>是基于 Lucene( Java)的, Lucene 是一套开源代码库.</li>
+</ul>
+</li>
+<li>Elasticsearch<ul>
+<li>也是基于 Luence( Java)的, 区别是 solr搜索性能在 索引模块空闲时更好, 索引中则差于Elasticsearch( 网传)</li>
+<li>与Logstash, Kibana 组团 <code>Elastic Stack</code>.</li>
+</ul>
+</li>
+<li>网传 solr 的社区更成熟一些, solr关键词在google中的结果集大约778W, elasticsearch 则是515W.</li>
+</ul>
+<hr>
+<h4 id="2-安装部署-基础功能测试-脚本编写"><a href="#2-安装部署-基础功能测试-脚本编写" class="headerlink" title="2. 安装部署, 基础功能测试, 脚本编写"></a>2. 安装部署, 基础功能测试, 脚本编写</h4><ul>
+<li>base<ul>
+<li><code>http://localhost:8983/solr/</code></li>
+</ul>
+</li>
+<li>install<ul>
+<li>ready<ul>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/apache/lucene/solr/6.6.0/" target="_blank" rel="external">solr 6.6.0</a></li>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">jdk 1.8+</a></li>
+<li><a href="https://dev.mysql.com/downloads/file/?id=472395" target="_blank" rel="external">mysql-jdbc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>run/commend<ul>
+<li><code>solr start -p [port]</code></li>
+<li><code>olr stop -all</code></li>
+</ul>
+</li>
+<li>core相关<ul>
+<li><strong>create</strong><ul>
+<li>new a core by admin-GUI</li>
+<li>copy from file system, need to modify somefiles<ul>
+<li><code>core_name/core.properties</code></li>
+<li><code>core_name/data/*</code> clear</li>
+<li><code>core_name/conf/data-config.xml</code></li>
+<li><code>core_name/conf/managed-schema</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>ready-data-import</strong><ul>
+<li>需要在core_name/lib目录下引用以下jar包<ul>
+<li><code>mysql-connector-java-5.1.43-bin.jar</code></li>
+<li><code>solr-dataimporthandler-6.6.0.jar</code></li>
+<li><code>solr-dataimporthandler-extras-6.6.0.jar</code></li>
+</ul>
+</li>
+<li>时区问题<ul>
+<li><code>core_root/bin/solr.in.sh</code> linux</li>
+<li><code>core_root/bin/solr.cmd</code> windows</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>定时增量/全量更新</strong><ul>
+<li>需要依赖一个表示时间的字段, CURRENT_TIMESTAMP. [表结构]</li>
+<li>需要依赖一个软删除的字段, <code>is_delete</code></li>
+<li>系统环境是WAMP, 使用python 2.7.8写了一个脚本. 脚本配置文件model.json <code>brand</code>即为core_name, 根据实际情况调整<code>brand</code>及<code>url.start</code>即可简单运行.</li>
+</ul>
+</li>
+<li><strong>效率</strong><ul>
+<li>3核</li>
+<li>50W商品, 增量更新, 通过修改 data-config.xml 来增加新字段, 任务开始直到有效果, [2017-08-01 14:10:23] - [2017-08-01 14:25:10], 耗时15m</li>
+<li>50W商品, 全量更新, 耗时 5m</li>
+<li>搜索时长 从 3s上下 降低至 100ms~200ms, FASTESP 搜索时长 700ms~900ms, MySQL搜索时长 3s上下, 仅指 关键词搜搜</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-附录"><a href="#3-附录" class="headerlink" title="3. 附录"></a>3. 附录</h4><ul>
+<li><a href="https://stackoverflow.com/questions/22005680/solr-could-not-load-mysql-jdbc-driver" target="_blank" rel="external">Solr could not load MySQL JDBC Driver</a></li>
+<li><p>代码片段</p>
+<h5 id="表结构"><a href="#表结构" class="headerlink" title="表结构"></a>表结构</h5>  <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`NewTable`</span> (</div><div class="line"><span class="string">`log_id`</span>  mediumint(<span class="number">8</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT ,</div><div class="line"><span class="string">`test_time`</span>  <span class="built_in">int</span>(<span class="number">10</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span> ,</div><div class="line"><span class="string">`ip_address`</span>  <span class="built_in">varchar</span>(<span class="number">15</span>) <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8 <span class="keyword">COLLATE</span> utf8_general_ci <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> ,</div><div class="line"><span class="string">`vote_time`</span>  <span class="keyword">timestamp</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CURRENT_TIMESTAMP</span> ,</div><div class="line"><span class="string">`is_delete`</span>  tinyint(<span class="number">1</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span> ,</div><div class="line">PRIMARY <span class="keyword">KEY</span> (<span class="string">`log_id`</span>),</div><div class="line"><span class="keyword">INDEX</span> <span class="string">`vote_id`</span> (<span class="string">`test_time`</span>) <span class="keyword">USING</span> BTREE </div><div class="line">)</div><div class="line"><span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span></div><div class="line"><span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span>=utf8 <span class="keyword">COLLATE</span>=utf8_general_ci</div><div class="line">AUTO_INCREMENT=<span class="number">15</span></div><div class="line">ROW_FORMAT=<span class="keyword">COMPACT</span></div><div class="line">;</div></pre></td></tr></table></figure>
+<hr>
+<h5 id="Http-response-JSON"><a href="#Http-response-JSON" class="headerlink" title="Http response(JSON)"></a>Http response(JSON)</h5>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 检测到当前有进行中的任务</span></div><div class="line">&#123;</div><div class="line">    <span class="string">"responseHeader"</span>: &#123;</div><div class="line">        <span class="string">"status"</span>: <span class="number">0</span>,</div><div class="line">        <span class="string">"QTime"</span>: <span class="number">1</span></div><div class="line">    &#125;,</div><div class="line">    <span class="string">"initArgs"</span>: [</div><div class="line">        <span class="string">"defaults"</span>, [</div><div class="line">            <span class="string">"config"</span>, <span class="string">"data-config.xml"</span></div><div class="line">        ]</div><div class="line">    ],</div><div class="line">    <span class="string">"command"</span>: <span class="string">"status"</span>,</div><div class="line">    <span class="string">"status"</span>: <span class="string">"busy"</span>,</div><div class="line">    <span class="string">"importResponse"</span>: <span class="string">"A command is still running..."</span>,</div><div class="line">    <span class="string">"statusMessages"</span>: &#123;</div><div class="line">        <span class="string">"Time Elapsed"</span>: <span class="string">"0:0:0.23"</span>,</div><div class="line">        <span class="string">"Total Requests made to DataSource"</span>: <span class="string">"1"</span>,</div><div class="line">        <span class="string">"Total Rows Fetched"</span>: <span class="string">"0"</span>,</div><div class="line">        <span class="string">"Total Documents Processed"</span>: <span class="string">"0"</span>,</div><div class="line">        <span class="string">"Total Documents Skipped"</span>: <span class="string">"0"</span>,</div><div class="line">        <span class="string">"Delta Dump started"</span>: <span class="string">"2017-07-31 02:25:04"</span>,</div><div class="line">        <span class="string">"Identifying Delta"</span>: <span class="string">"2017-07-31 02:25:04"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 检测到更改时</span></div><div class="line">&#123;</div><div class="line">    <span class="string">"responseHeader"</span>: &#123;</div><div class="line">        <span class="string">"status"</span>: <span class="number">0</span>,</div><div class="line">        <span class="string">"QTime"</span>: <span class="number">6</span></div><div class="line">    &#125;,</div><div class="line">    <span class="string">"initArgs"</span>: [</div><div class="line">        <span class="string">"defaults"</span>, [</div><div class="line">            <span class="string">"config"</span>, <span class="string">"data-config.xml"</span></div><div class="line">        ]</div><div class="line">    ],</div><div class="line">    <span class="string">"command"</span>: <span class="string">"delta-import"</span>,</div><div class="line">    <span class="string">"status"</span>: <span class="string">"idle"</span>,</div><div class="line">    <span class="string">"importResponse"</span>: <span class="string">""</span>,</div><div class="line">    <span class="string">"statusMessages"</span>: &#123;</div><div class="line">        <span class="string">"Total Requests made to DataSource"</span>: <span class="string">"2"</span>,</div><div class="line">        <span class="string">"Total Rows Fetched"</span>: <span class="string">"2"</span>,</div><div class="line">        <span class="string">"Total Documents Processed"</span>: <span class="string">"1"</span>,</div><div class="line">        <span class="string">"Total Documents Skipped"</span>: <span class="string">"0"</span>,</div><div class="line">        <span class="string">"Delta Dump started"</span>: <span class="string">"2017-07-31 02:25:04"</span>,</div><div class="line">        <span class="string">"Identifying Delta"</span>: <span class="string">"2017-07-31 02:25:04"</span>,</div><div class="line">        <span class="string">"Deltas Obtained"</span>: <span class="string">"2017-07-31 02:25:04"</span>,</div><div class="line">        <span class="string">"Building documents"</span>: <span class="string">"2017-07-31 02:25:04"</span>,</div><div class="line">        <span class="string">"Total Changed Documents"</span>: <span class="string">"1"</span>,</div><div class="line">        <span class="string">""</span>: <span class="string">"Indexing completed. Added/Updated: 1 documents. Deleted 0 documents."</span>,</div><div class="line">        <span class="string">"Committed"</span>: <span class="string">"2017-07-31 02:25:04"</span>,</div><div class="line">        <span class="string">"Time taken"</span>: <span class="string">"0:0:0.489"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 没有更改时</span></div><div class="line">&#123;</div><div class="line">    <span class="string">"responseHeader"</span>: &#123;</div><div class="line">        <span class="string">"status"</span>: <span class="number">0</span>,</div><div class="line">        <span class="string">"QTime"</span>: <span class="number">40</span></div><div class="line">    &#125;,</div><div class="line">    <span class="string">"initArgs"</span>: [</div><div class="line">        <span class="string">"defaults"</span>, [</div><div class="line">            <span class="string">"config"</span>, <span class="string">"data-config.xml"</span></div><div class="line">        ]</div><div class="line">    ],</div><div class="line">    <span class="string">"command"</span>: <span class="string">"delta-import"</span>,</div><div class="line">    <span class="string">"status"</span>: <span class="string">"idle"</span>,</div><div class="line">    <span class="string">"importResponse"</span>: <span class="string">""</span>,</div><div class="line">    <span class="string">"statusMessages"</span>: &#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h5 id="HTTP-GET-DATA-search-params"><a href="#HTTP-GET-DATA-search-params" class="headerlink" title="HTTP GET DATA(search params)"></a>HTTP GET DATA(search params)</h5>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">// order by id asc</div><div class="line">_:1501556039804</div><div class="line">indent:on</div><div class="line">q:加油口盖罩</div><div class="line">sort:id asc</div><div class="line">wt:json</div><div class="line"></div><div class="line">// order by goods_sn_tmp desc</div><div class="line">_:1501556039804</div><div class="line">indent:on</div><div class="line">q:加油口盖罩</div><div class="line">sort:id desc</div><div class="line">wt:json</div><div class="line"></div><div class="line">// goods_sn_tmp = XXX</div><div class="line">_:1501556039804</div><div class="line">fq:goods_sn_tmp A2174700164</div><div class="line">indent:on</div><div class="line">q:加油口盖罩</div><div class="line">wt:json</div><div class="line"></div><div class="line">// between min TO max, must be `TO`(uppercase)</div><div class="line">_:1501556039804</div><div class="line">fq:market_price:[1.00 TO 10.00]</div><div class="line">indent:on</div><div class="line">q:加油口盖罩</div><div class="line">sort:market_price asc</div><div class="line">wt:json</div></pre></td></tr></table></figure>
+<hr>
+<h5 id="一些细节"><a href="#一些细节" class="headerlink" title="一些细节"></a>一些细节</h5><ul>
+<li><code>dataimporter.last_index_time</code>取自<code>dataimport.properties last_index_time</code>. 可手动修改(, 然而并没有什么意义).</li>
+<li>${dih.delta.id} 与 ${dataimporter.delta.id} 都可识别.</li>
+<li>solr 会检测deltaQuery中的SQL语句, 其中不能包含 <code>&lt;</code> 符号.</li>
+</ul>
+<hr>
+<p>  <code>data-config.xml</code>样例</p>
+  <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dataConfig</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dataSource</span> <span class="attr">name</span>=<span class="string">"solrDB"</span> <span class="attr">type</span>=<span class="string">"JdbcDataSource"</span> <span class="attr">driver</span>=<span class="string">"com.mysql.jdbc.Driver"</span> <span class="attr">url</span>=<span class="string">"jdbc:mysql://192.168.1.110:5635/shopcyw?useUnicode=true"</span> <span class="attr">user</span>=<span class="string">"root"</span> <span class="attr">password</span>=<span class="string">"pass@word12"</span> <span class="attr">batchSize</span>=<span class="string">"-1"</span> <span class="attr">autoCommit</span>=<span class="string">"false"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">document</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">entity</span> <span class="attr">dataSource</span>=<span class="string">"solrDB"</span> <span class="attr">name</span>=<span class="string">"incre"</span> <span class="attr">pk</span>=<span class="string">"id"</span> <span class="attr">query</span>=<span class="string">"select log_id as id, ip_address from solr_test"</span> <span class="attr">deltaImportQuery</span>=<span class="string">"select log_id as id,ip_address from solr_test where log_id = $&#123;dataimporter.delta.id&#125;"</span> <span class="attr">deltaQuery</span>=<span class="string">"select log_id as id from solr_test where FROM_UNIXTIME(test_time, '%Y-%m-%d %H:%i:%s') &gt; '$&#123;dataimporter.last_index_time&#125;'"</span> <span class="attr">deletedPkQuery</span>=<span class="string">"select log_id as id from solr_test where is_delete = 1"</span></span></div><div class="line"><span class="tag">            &gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">field</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">name</span>=<span class="string">"id"</span> /&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">field</span> <span class="attr">column</span>=<span class="string">"ip_address"</span> <span class="attr">name</span>=<span class="string">"ip_address"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">entity</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">document</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dataConfig</span>&gt;</span></div></pre></td></tr></table></figure>
+<hr>
+<h5 id="时区问题"><a href="#时区问题" class="headerlink" title="时区问题"></a>时区问题</h5>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">windows: solr_root/bin/solr.cmd 更改 `set SOLR_TIMEZONE=UTC` 为 `set SOLR_TIMEZONE=UTC+8`</div></pre></td></tr></table></figure>
+<hr>
+<h5 id="手动删除记录-by-admin-GUI-XML"><a href="#手动删除记录-by-admin-GUI-XML" class="headerlink" title="手动删除记录 by admin-GUI-XML"></a>手动删除记录 by admin-GUI-XML</h5>  <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">delete</span>&gt;</span><span class="tag">&lt;<span class="name">query</span>&gt;</span>id:3<span class="tag">&lt;/<span class="name">query</span>&gt;</span><span class="tag">&lt;/<span class="name">delete</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;<span class="name">commit</span>/&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="手动删除记录-by-admin-GUI-json-未验证"><a href="#手动删除记录-by-admin-GUI-json-未验证" class="headerlink" title="手动删除记录 by admin-GUI-json, 未验证"></a>手动删除记录 by admin-GUI-json, 未验证</h5>  <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123; <span class="attr">"delete"</span>:<span class="string">"1"</span> &#125;</div><div class="line">&#123; <span class="attr">"delete"</span>:[<span class="string">"id1"</span>,<span class="string">"id2"</span>] &#125;</div><div class="line">&#123;</div><div class="line">  <span class="attr">"delete"</span>:<span class="string">"id"</span>:<span class="number">50</span>,</div><div class="line">  <span class="attr">"_version_"</span>:<span class="number">12345</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h5 id="一次完整的请求-curl"><a href="#一次完整的请求-curl" class="headerlink" title="一次完整的请求(curl)"></a>一次完整的请求(curl)</h5>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl &quot;http://192.168.1.161:8983/solr/collec_incre/dataimport?_=1501465864269^&amp;indent=on^&amp;wt=json&quot; -H &quot;Pragma: no-cache&quot; -H &quot;Cookie: dataimport_autorefresh=null; ECS^[visit_times^]=1; session_id_ip=192.168.1.161_c3a85ab5054726b1e1a1192fcd552c12; UM_distinctid=15d30557a49457-0cbf02f98c05d2-1b1b7e58-1fa400-15d30557a4a79; city=1; district=2; CNZZDATA1260948496=1083174609-1499749671-^%^7C1499760989&quot; -H &quot;Origin: http://192.168.1.161:8983&quot; -H &quot;Accept-Encoding: gzip, deflate&quot; -H &quot;Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4&quot; -H &quot;User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36&quot; -H &quot;Content-type: application/x-www-form-urlencoded&quot; -H &quot;Accept: application/json, text/plain, */*&quot; -H &quot;Cache-Control: no-cache&quot; -H &quot;Referer: http://192.168.1.161:8983/solr/&quot; -H &quot;Proxy-Connection: keep-alive&quot; --data &quot;command=delta-import^&amp;verbose=false^&amp;clean=false^&amp;commit=true^&amp;optimize=false^&amp;core=collec_incre^&amp;name=dataimport&quot; --compressed &amp;</div><div class="line">curl &quot;http://192.168.1.161:8983/solr/collec_incre/dataimport?_=1501465864269^&amp;command=status^&amp;indent=on^&amp;wt=json&quot; -H &quot;Pragma: no-cache&quot; -H &quot;Cookie: dataimport_autorefresh=null; ECS^[visit_times^]=1; session_id_ip=192.168.1.161_c3a85ab5054726b1e1a1192fcd552c12; UM_distinctid=15d30557a49457-0cbf02f98c05d2-1b1b7e58-1fa400-15d30557a4a79; city=1; district=2; CNZZDATA1260948496=1083174609-1499749671-^%^7C1499760989&quot; -H &quot;Accept-Encoding: gzip, deflate&quot; -H &quot;Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4&quot; -H &quot;User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36&quot; -H &quot;Accept: application/json, text/plain, */*&quot; -H &quot;Cache-Control: no-cache&quot; -H &quot;Referer: http://192.168.1.161:8983/solr/&quot; -H &quot;Proxy-Connection: keep-alive&quot; -H &quot;doNotIntercept: true&quot; --compressed</div></pre></td></tr></table></figure>
+<h5 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h5>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="string">"responseHeader"</span>: &#123;</div><div class="line">        <span class="string">"status"</span>: <span class="number">0</span>,</div><div class="line">        <span class="string">"QTime"</span>: <span class="number">6</span></div><div class="line">    &#125;,</div><div class="line">    <span class="string">"initArgs"</span>: [</div><div class="line">        <span class="string">"defaults"</span>, [</div><div class="line">            <span class="string">"config"</span>, <span class="string">"data-config.xml"</span></div><div class="line">        ]</div><div class="line">    ],</div><div class="line">    <span class="string">"command"</span>: <span class="string">"delta-import"</span>,</div><div class="line">    <span class="string">"status"</span>: <span class="string">"idle"</span>,</div><div class="line">    <span class="string">"importResponse"</span>: <span class="string">""</span>,</div><div class="line">    <span class="string">"statusMessages"</span>: &#123;</div><div class="line">        <span class="string">"Total Requests made to DataSource"</span>: <span class="string">"2"</span>,</div><div class="line">        <span class="string">"Total Rows Fetched"</span>: <span class="string">"2"</span>,</div><div class="line">        <span class="string">"Total Documents Processed"</span>: <span class="string">"1"</span>,</div><div class="line">        <span class="string">"Total Documents Skipped"</span>: <span class="string">"0"</span>,</div><div class="line">        <span class="string">"Delta Dump started"</span>: <span class="string">"2017-07-31 02:25:04"</span>,</div><div class="line">        <span class="string">"Identifying Delta"</span>: <span class="string">"2017-07-31 02:25:04"</span>,</div><div class="line">        <span class="string">"Deltas Obtained"</span>: <span class="string">"2017-07-31 02:25:04"</span>,</div><div class="line">        <span class="string">"Building documents"</span>: <span class="string">"2017-07-31 02:25:04"</span>,</div><div class="line">        <span class="string">"Total Changed Documents"</span>: <span class="string">"1"</span>,</div><div class="line">        <span class="string">""</span>: <span class="string">"Indexing completed. Added/Updated: 1 documents. Deleted 0 documents."</span>,</div><div class="line">        <span class="string">"Committed"</span>: <span class="string">"2017-07-31 02:25:04"</span>,</div><div class="line">        <span class="string">"Time taken"</span>: <span class="string">"0:0:0.489"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://xiaotian044500.github.io/2017/07/26/solr/" data-id="cj7r2cqbg005jxbmrmptruc6p" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Elasticsearch/">Elasticsearch</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Luence/">Luence</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/solr/">solr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/全量更新/">全量更新</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/增量更新/">增量更新</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/多轮排序-单轮排序/">多轮排序/单轮排序</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/排序抖动/">排序抖动</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搜索/">搜索</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据音噪比/">数据音噪比</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/08/20/chrome-plugin-dvlp/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          chrome-plugin-dvlp
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/29/Laravel/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Laravel</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+        <a href="/tags/github-io-git/" style="font-size: 13px; color: #39aad4">.github.io.git</a> <a href="/tags/Chrome/" style="font-size: 13px; color: #39aad4">Chrome</a> <a href="/tags/Elasticsearch/" style="font-size: 13px; color: #39aad4">Elasticsearch</a> <a href="/tags/FIFO/" style="font-size: 13px; color: #39aad4">FIFO</a> <a href="/tags/Gitblit/" style="font-size: 13px; color: #39aad4">Gitblit</a> <a href="/tags/Hexo/" style="font-size: 35px; color: #39aad4">Hexo</a> <a href="/tags/Laravel/" style="font-size: 13px; color: #39aad4">Laravel</a> <a href="/tags/Laravel-Homestead/" style="font-size: 13px; color: #39aad4">Laravel Homestead</a> <a href="/tags/Lightweight-Markup-Language/" style="font-size: 13px; color: #39aad4">Lightweight Markup Language</a> <a href="/tags/MersenneTwister/" style="font-size: 13px; color: #39aad4">MersenneTwister</a> <a href="/tags/NoSQL/" style="font-size: 13px; color: #39aad4">NoSQL</a> <a href="/tags/PIL/" style="font-size: 13px; color: #39aad4">PIL</a> <a href="/tags/Python/" style="font-size: 35px; color: #39aad4">Python</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul id="accordion" class="accordion"><li data-tree="0" data-cat_path="Business/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Business/">Business</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="Business/order/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Business/order/">order</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="Hexo/" data-article_count="2"><div class="link"><i class="fa"></i><a " href="/categories/Hexo/">Hexo</a><i class="fa fa-chevron-down"></i></div></li><li data-tree="0" data-cat_path="Laravel/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Laravel/">Laravel</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="Laravel/Laravel-Homestead/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Laravel/Laravel-Homestead/">Laravel Homestead</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="Luence/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Luence/">Luence</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="Luence/solr/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Luence/solr/">solr</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="MarkDown/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/MarkDown/">MarkDown</a><i class="fa fa-chevron-down"></i></div></li><li data-tree="0" data-cat_path="Python/" data-article_count="3"><div class="link"><i class="fa"></i><a " href="/categories/Python/">Python</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="Python/GIL/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Python/GIL/">GIL</a><i class="fa"></i></div></li><li data-tree="1" data-cat_path="Python/PEPs/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Python/PEPs/">PEPs</a><i class="fa"></i></div><ul class="submenu"><li data-tree="2" data-cat_path="Python/PEPs/PEP8/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Python/PEPs/PEP8/">PEP8</a><i class="fa"></i></div></li></ul></li><li data-tree="1" data-cat_path="Python/Scrapy/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Python/Scrapy/">Scrapy</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="Redis/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Redis/">Redis</a><i class="fa fa-chevron-down"></i></div></li><li data-tree="0" data-cat_path="alipay/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/alipay/">alipay</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="alipay/app-pay/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/alipay/app-pay/">app.pay</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="chrome/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/chrome/">chrome</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="chrome/chrome-plugins/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/chrome/chrome-plugins/">chrome plugins</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="git/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/git/">git</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="git/Gitblit/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/git/Gitblit/">Gitblit</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="javascript/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/javascript/">javascript</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="javascript/json/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/javascript/json/">json</a><i class="fa"></i></div></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 XT044500<br>
+      Powered by <a href="http://hexo.io/" target="_blank" rel="noopener">Hexo</a><br>
+        <div id="ext_busuanzi" style="display: none;">
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+            </span>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="https://wakatime.com/" class="mobile-nav-link">Wakatime</a>
+  
+</nav>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox-min.css">
+  <script src="/fancybox/jquery.fancybox.pack-min.js"></script>
+
+
+<script src="/js/script-min.js"></script>
+<script src="/js/granule-min.js"></script>
+<script src="/js/require-min.js"></script>
+<script src="/js/category_demo-min.js"></script>
+
+
+
+<script async src="/js/canvas_index-min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105815046-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  </div>
+</body>
+</html>
