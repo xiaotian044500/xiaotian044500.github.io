@@ -1,1 +1,0 @@
-(function(){var c=document.getElementById("footer-info");var b=function(){document.getElementById("ext_busuanzi").style.display="inline"};var a=function(){setTimeout(function(){document.getElementById("ext_busuanzi").style.display="none"},2000)};c.addEventListener("mouseover",b,true);c.addEventListener("mouseout",a,true)})();

@@ -1,1 +1,0 @@
-define(function(){if(document.addEventListener){var a=function(e,d,c){e.addEventListener(d,c,false)};var b=function(e,d,c){e.removeEventListener(d,c,false)}}else{var a=function(e,d,c){e.attachEvent("on"+d,c)};var b=function(e,d,c){e.detachEvent("on"+d,c)}}return{add:a,remove:b}});
