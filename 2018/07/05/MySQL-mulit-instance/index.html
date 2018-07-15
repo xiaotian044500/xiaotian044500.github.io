@@ -1,0 +1,270 @@
+<!-- Critical Error: can not find object at line NAN. -->
+<!DOCTYPE html>
+<script type="text/javascript">
+    if (document.readyState === "loading") {  // loading, interactive, complete
+      if('xiaotian044500.github.io' === location.hostname && 'https:' != location.protocol){
+        location.href = 'https://xiaotian044500.github.io'
+      }
+    }
+</script>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>MySQL-mulit-instance | Enjoy life, enjoy coding.</title>
+  <meta name="keywords" content="xt044500,xiaotian044500"></meta>
+  <meta name="description" content="xiaotian044500的奋斗史, xiaotian044500的博客"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本机MySQL多实例(不同端口号)安装">
+<meta name="keywords" content="MySQL,mysqld,mysqld_safe,mysqladmin,mulit-instance">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL-mulit-instance">
+<meta property="og:url" content="https://xiaotian044500.github.io/2018/07/05/MySQL-mulit-instance/index.html">
+<meta property="og:site_name" content="Enjoy life, enjoy coding.">
+<meta property="og:description" content="本机MySQL多实例(不同端口号)安装">
+<meta property="og:locale" content="diy">
+<meta property="og:updated_time" content="2018-07-15T07:03:24.168Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MySQL-mulit-instance">
+<meta name="twitter:description" content="本机MySQL多实例(不同端口号)安装">
+  
+    <link rel="alternate" href="/atom.xml" title="Enjoy life, enjoy coding." type="application/atom+xml">
+  
+  
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="javascript:void(0);" id="logo" style="cursor:default">Enjoy life, enjoy coding.</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="javascript:void(0);" id="subtitle" style="cursor:default">时间在我们每个人身上所沉淀的都是我们自己选择的</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="https://wakatime.com/">Wakatime</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://xiaotian044500.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+<div id="utility-bar" class="utility-bar" style="position: fixed;top:0;width:100%;">
+  <div class="container">
+    <div class="pull-left">
+      <a id="j-show-text" href="javascript:void(0);" class="signup-button btn btn-success btn-md mf-listen">Use Auth0 for Free</a>
+    </div>
+  </div>
+</div>
+      <div class="outer">
+        <section id="main"><article id="post-MySQL-mulit-instance" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/05/MySQL-mulit-instance/" class="article-date">
+  <time datetime="2018-07-05T12:25:26.000Z" itemprop="datePublished">2018-07-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MySQL-mulit-instance
+    </h1>
+  
+
+      </header>
+    
+    <div class="post-meta">
+      <span class="post-count">阅读预计 5 分钟</span>
+      <span class="post-count"> &nbsp; | &nbsp;约 984 字 &nbsp; </span>
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="本机MySQL多实例-不同端口号-安装"><a href="#本机MySQL多实例-不同端口号-安装" class="headerlink" title="本机MySQL多实例(不同端口号)安装"></a>本机MySQL多实例(不同端口号)安装</h5><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="comment">### 本地环境-ubuntu-14.04-LTS</span></div><div class="line"></div><div class="line"><span class="comment">#####MySQL-info-summary</span></div><div class="line">bin-path:      /usr/bin/mysql</div><div class="line">conf-path:     </div><div class="line">    - /etc/mysql/3306_my.cnf</div><div class="line">    - /etc/mysql/3316_my.cnf</div><div class="line">    - /etc/mysql/3326_my.cnf</div><div class="line">resource-path:</div><div class="line">    - /var/lib/mysql_3306/data</div><div class="line">    - /var/lib/mysql_3316/data  <span class="comment"># 必须是 mysql:mysql 用户组</span></div><div class="line">    - /var/lib/mysql_3326/data  <span class="comment"># 必须是 mysql:mysql 用户组</span></div><div class="line"></div><div class="line">sudo -i</div><div class="line"><span class="comment"># 初始化3316实例:</span></div><div class="line">/usr/bin/mysql_install_db --defaults-file=/etc/mysql/3316_my.cnf --basedir=/usr --datadir=/var/lib/mysql_3316/data --user=mysql --<span class="built_in">log</span>-error=/var/<span class="built_in">log</span>/mysql/3316_error.log --pid-file=/var/run/mysqld/3316_mysqld.pid --socket=/var/run/mysqld/3316_mysqld.sock --port=3316</div><div class="line"></div><div class="line"><span class="comment"># 启动3316实例, 忽略密码验证</span></div><div class="line"><span class="comment"># 以安全模式启动mysqld(安全模式下, mysqld_safe 像一个守护进程, 当mysqld异常终止时(如 kill -9 xxx杀死mysqld), mysqld_safe会尝试新启动一个mysqld进程), 并且跳过权限验证</span></div><div class="line">mysqld_safe --defaults-file=/etc/mysql/3316_my.cnf --user=mysql --skip-grant-tables &amp;</div><div class="line"></div><div class="line"><span class="comment"># 无密码登录root用户</span></div><div class="line">mysql -uroot -h127.0.0.1 -P3316</div><div class="line"></div><div class="line"><span class="comment"># (建议立即)修改root密码</span></div><div class="line">use mysql;</div><div class="line">update user <span class="built_in">set</span> Password = PASSWORD(<span class="string">"Monty"</span>) <span class="built_in">where</span> User=<span class="string">'root'</span>;</div><div class="line">flush privileges;</div><div class="line">quit;</div><div class="line"></div><div class="line"><span class="comment"># 关闭3316实例</span></div><div class="line">mysqladmin -uroot -pMonty -S /var/run/mysqld/3316_mysqld.sock -vvv shutdown</div><div class="line"></div><div class="line"><span class="comment"># 重启mysql server(不再以`skip-grant-tables`参数启动, 需要root权限), root用户新密码登录</span></div><div class="line">mysqld --defaults-file=/etc/mysql/3316_my.cnf --user=mysql &amp;</div><div class="line">mysql -uroot -pMonty -h127.0.0.1 -P3316</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="安装过程中遇到的几个问题"><a href="#安装过程中遇到的几个问题" class="headerlink" title="安装过程中遇到的几个问题"></a>安装过程中遇到的几个问题</h1><h5 id="问题0-key-buffer-size-is-deprecate"><a href="#问题0-key-buffer-size-is-deprecate" class="headerlink" title="问题0: key_buffer_size is deprecate"></a>问题0: key_buffer_size is deprecate</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">root@XT044500:~<span class="comment"># mysql_install_db  --defaults-file=/etc/mysql/3316_my.cnf  --basedir=/usr  --datadir=/var/lib/mysql_3316  --user=mysql</span></div><div class="line">Installing MySQL system tables...</div><div class="line">180704 19:19:59 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed <span class="keyword">in</span> a future release. Please use the full name instead.</div></pre></td></tr></table></figure>
+<p>解决: MySQL 配置项, <code>key_buffer</code> 替换为 <code>key_buffer_size</code></p>
+<hr>
+<h5 id="问题1-mysqld-safe-Can’t-log-to-error-log-and-syslog-at-the-same-time"><a href="#问题1-mysqld-safe-Can’t-log-to-error-log-and-syslog-at-the-same-time" class="headerlink" title="问题1: mysqld_safe Can’t log to error log and syslog at the same time"></a>问题1: mysqld_safe Can’t log to error log and syslog at the same time</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">root@XT044500:~<span class="comment"># mysqld_safe --defaults-file=/etc/mysql/3316_my.cnf --user=mysql</span></div><div class="line">180705 11:03:22 mysqld_safe Can<span class="string">'t log to error log and syslog at the same time.  Remove all --log-error configuration options for --syslog to take effect.</span></div><div class="line"><span class="string">180705 11:03:22 mysqld_safe Logging to '</span>/var/<span class="built_in">log</span>/mysql/3316_error.log<span class="string">'.</span></div><div class="line"><span class="string">180705 11:03:22 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql_3316</span></div><div class="line"><span class="string">180705 11:03:22 mysqld_safe mysqld from pid file /var/run/mysqld/3316_mysqld.pid ended</span></div></pre></td></tr></table></figure>
+<p>解决: 注释掉 <code>log_error = /var/log/mysql/3316_error.log</code> 配置项<br>原因: (linux下)mysqld_safe 会默认向syslog里写如错误日志, 无需再向配置文件中的<code>log_error</code>项写入</p>
+<hr>
+<h5 id="问题2-mysqld-pid-ended-详细的问题描述在系统日志里"><a href="#问题2-mysqld-pid-ended-详细的问题描述在系统日志里" class="headerlink" title="问题2: mysqld.pid ended, 详细的问题描述在系统日志里"></a>问题2: mysqld.pid ended, 详细的问题描述在系统日志里</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">root@XT044500:~<span class="comment"># mysqld_safe --defaults-file=/etc/mysql/3316_my.cnf --user=mysql</span></div><div class="line">180705 11:14:00 mysqld_safe Logging to syslog.</div><div class="line">180705 11:14:00 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql_3316/data</div><div class="line">180705 11:14:00 mysqld_safe mysqld from pid file /var/run/mysqld/3316_mysqld.pid ended</div></pre></td></tr></table></figure>
+<p>syslog: Can’t find messagefile errmsg.sys<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Jul  5 11:37:12 XT044500 mysqld: 180705 11:37:12 [Note] /usr/sbin/mysqld (mysqld 5.5.60-0ubuntu0.14.04.1) starting as process 28281 ...</div><div class="line">Jul  5 11:37:12 XT044500 mysqld: 180705 11:37:12 [ERROR] Can<span class="string">'t find messagefile '</span>/usr/share/mysql_3316/errmsg.sys<span class="string">'</span></div></pre></td></tr></table></figure></p>
+<p>解决: 简单粗暴的处理, 注释掉 <code>lc-messages-dir        = /usr/share/mysql_3316</code> 配置项</p>
+<hr>
+<h5 id="问题3-mysqld-pid-ended-详细的问题描述在系统日志里"><a href="#问题3-mysqld-pid-ended-详细的问题描述在系统日志里" class="headerlink" title="问题3: mysqld.pid ended, 详细的问题描述在系统日志里"></a>问题3: mysqld.pid ended, 详细的问题描述在系统日志里</h5><p>syslog: Bind on unix socket: Permission denied<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Jul  5 11:44:57 XT044500 mysqld: 180705 11:44:57 [ERROR] Can<span class="string">'t start server : Bind on unix socket: Permission denied</span></div><div class="line"><span class="string">Jul  5 11:44:57 XT044500 mysqld: 180705 11:44:57 [ERROR] Do you already have another mysqld server running on socket: /var/run/mysqld/3316_mysqld.sock ?</span></div><div class="line"><span class="string">Jul  5 11:44:57 XT044500 mysqld: 180705 11:44:57 [ERROR] Aborting</span></div></pre></td></tr></table></figure></p>
+<p>解决: 编辑 apparmor, 然后重启</p>
+<ol>
+<li>vim /etc/apparmor.d/usr.sbin.mysqld</li>
+<li>/etc/init.d/apparmor restart</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># `/etc/apparmor.d/usr.sbin.mysqld`</span></div><div class="line">/usr/sbin/mysqld &#123;</div><div class="line">...</div><div class="line">  /usr/sbin/mysqld mr,</div><div class="line">  /usr/share/mysql/** r,</div><div class="line">  /usr/share/mysql_3316/** r, <span class="comment"># new add</span></div><div class="line">  /var/<span class="built_in">log</span>/mysql.log rw,</div><div class="line">  /var/<span class="built_in">log</span>/mysql.err rw,</div><div class="line">  /var/lib/mysql/ r,</div><div class="line">  /var/lib/mysql/** rwk,</div><div class="line">  /var/lib/mysql-files/ r,</div><div class="line">  /var/lib/mysql-files/** rwk,</div><div class="line">  /var/lib/mysql_3316/ r, <span class="comment"># new add</span></div><div class="line">  /var/lib/mysql_3316/** rwk, <span class="comment"># new add</span></div><div class="line">  /var/<span class="built_in">log</span>/mysql/ r,</div><div class="line">  /var/<span class="built_in">log</span>/mysql/* rw,</div><div class="line">  /var/run/mysqld/mysqld.pid rw,</div><div class="line">  /var/run/mysqld/mysqld.sock w,</div><div class="line">  /var/run/mysqld/3316_mysqld.pid rw, <span class="comment"># new add</span></div><div class="line">  /var/run/mysqld/3316_mysqld.sock w, <span class="comment"># new add</span></div><div class="line">  /run/mysqld/mysqld.pid rw,</div><div class="line">  /run/mysqld/mysqld.sock w,</div><div class="line">  /run/mysqld/3316_mysqld.pid rw, <span class="comment"># new add</span></div><div class="line">  /run/mysqld/3316_mysqld.sock w, <span class="comment"># new add</span></div><div class="line">...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>原因: ubuntu 下, apparmor 限制</p>
+<hr>
+<h5 id="问题4-MySQL-ERROR-1290-HY000"><a href="#问题4-MySQL-ERROR-1290-HY000" class="headerlink" title="问题4: MySQL ERROR 1290 (HY000)"></a>问题4: MySQL ERROR 1290 (HY000)</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">grant</span> <span class="keyword">replication</span> <span class="keyword">slave</span>, <span class="keyword">replication</span> <span class="keyword">client</span> <span class="keyword">on</span> *.* <span class="keyword">to</span> <span class="string">'robot'</span>@<span class="string">'127.0.0.1'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'Monty'</span>;</div><div class="line"><span class="comment">-- ERROR 1290 (HY000): The MySQL server is running with the --skip-grant-tables option so it cannot execute this statement</span></div></pre></td></tr></table></figure>
+<p>解决: 先执行一遍 <code>flush privileges;</code> 就好<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">flush</span> <span class="keyword">privileges</span>;</div><div class="line"><span class="comment">-- Query OK, 0 rows affected, 3 warnings (0.02 sec)</span></div><div class="line"></div><div class="line"><span class="keyword">grant</span> <span class="keyword">replication</span> <span class="keyword">slave</span>, <span class="keyword">replication</span> <span class="keyword">client</span> <span class="keyword">on</span> *.* <span class="keyword">to</span> <span class="string">'repl_user'</span>@<span class="string">'127.0.0.1'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'Monty'</span>;</div><div class="line"><span class="comment">-- Query OK, 0 rows affected (0.00 sec)</span></div></pre></td></tr></table></figure></p>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://xiaotian044500.github.io/2018/07/05/MySQL-mulit-instance/" data-id="cjjmjkuvl001zhouotrvof53c" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mulit-instance/">mulit-instance</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysqladmin/">mysqladmin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysqld/">mysqld</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysqld-safe/">mysqld_safe</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/07/10/gpg/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          gpg
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/29/swoole/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">swoole</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+        <a href="/tags/Chrome/" style="font-size: 13px; color: #39aad4">Chrome</a> <a href="/tags/Composer/" style="font-size: 13px; color: #39aad4">Composer</a> <a href="/tags/FAQ/" style="font-size: 13px; color: #39aad4">FAQ</a> <a href="/tags/FIFO/" style="font-size: 13px; color: #39aad4">FIFO</a> <a href="/tags/Gitblit/" style="font-size: 13px; color: #39aad4">Gitblit</a> <a href="/tags/Hexo/" style="font-size: 35px; color: #39aad4">Hexo</a> <a href="/tags/I-m-fine-EQ-emoen/" style="font-size: 13px; color: #39aad4">I'm fine EQ emoen</a> <a href="/tags/John-Gruber/" style="font-size: 13px; color: #39aad4">John Gruber</a> <a href="/tags/Laravel/" style="font-size: 13px; color: #39aad4">Laravel</a> <a href="/tags/Lightweight-Markup-Language/" style="font-size: 13px; color: #39aad4">Lightweight Markup Language</a> <a href="/tags/MersenneTwister/" style="font-size: 13px; color: #39aad4">MersenneTwister</a> <a href="/tags/Notification/" style="font-size: 13px; color: #39aad4">Notification</a> <a href="/tags/PEP8/" style="font-size: 13px; color: #39aad4">PEP8</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul id="accordion" class="accordion"><li data-tree="0" data-cat_path="Business/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Business/">Business</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="Business/order/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Business/order/">order</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="Hexo/" data-article_count="2"><div class="link"><i class="fa"></i><a " href="/categories/Hexo/">Hexo</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="Hexo/command/" data-article_count="2"><div class="link"><i class="fa"></i><a " href="/categories/Hexo/command/">command</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="Laravel/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Laravel/">Laravel</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="Laravel/Laravel-Homestead/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Laravel/Laravel-Homestead/">Laravel Homestead</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="Luence/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Luence/">Luence</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="Luence/solr/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Luence/solr/">solr</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="MarkDown/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/MarkDown/">MarkDown</a><i class="fa fa-chevron-down"></i></div></li><li data-tree="0" data-cat_path="MySQL/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/MySQL/">MySQL</a><i class="fa fa-chevron-down"></i></div></li><li data-tree="0" data-cat_path="PHP/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/PHP/">PHP</a><i class="fa fa-chevron-down"></i></div></li><li data-tree="0" data-cat_path="Python/" data-article_count="3"><div class="link"><i class="fa"></i><a " href="/categories/Python/">Python</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="Python/GIL/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Python/GIL/">GIL</a><i class="fa"></i></div></li><li data-tree="1" data-cat_path="Python/PEPs/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Python/PEPs/">PEPs</a><i class="fa"></i></div><ul class="submenu"><li data-tree="2" data-cat_path="Python/PEPs/PEP8/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Python/PEPs/PEP8/">PEP8</a><i class="fa"></i></div></li></ul></li><li data-tree="1" data-cat_path="Python/Scrapy/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Python/Scrapy/">Scrapy</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="Redis/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/Redis/">Redis</a><i class="fa fa-chevron-down"></i></div></li><li data-tree="0" data-cat_path="alipay/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/alipay/">alipay</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="alipay/app-pay/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/alipay/app-pay/">app.pay</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="chrome/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/chrome/">chrome</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="chrome/chrome-plugins/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/chrome/chrome-plugins/">chrome plugins</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="git/" data-article_count="2"><div class="link"><i class="fa"></i><a " href="/categories/git/">git</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="git/Gitblit/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/git/Gitblit/">Gitblit</a><i class="fa"></i></div></li><li data-tree="1" data-cat_path="git/command/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/git/command/">command</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="gpg/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/gpg/">gpg</a><i class="fa fa-chevron-down"></i></div></li><li data-tree="0" data-cat_path="javascript/" data-article_count="2"><div class="link"><i class="fa"></i><a " href="/categories/javascript/">javascript</a><i class="fa fa-chevron-down"></i></div><ul class="submenu"><li data-tree="1" data-cat_path="javascript/Chrome-dvlp/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/javascript/Chrome-dvlp/">Chrome-dvlp</a><i class="fa"></i></div></li><li data-tree="1" data-cat_path="javascript/json/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/javascript/json/">json</a><i class="fa"></i></div></li></ul></li><li data-tree="0" data-cat_path="swoole/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/swoole/">swoole</a><i class="fa fa-chevron-down"></i></div></li><li data-tree="0" data-cat_path="tools/" data-article_count="1"><div class="link"><i class="fa"></i><a " href="/categories/tools/">tools</a><i class="fa fa-chevron-down"></i></div></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 XT044500<br>
+      Powered by <a href="http://hexo.io/" target="_blank" rel="noopener">Hexo</a><br>
+        <div id="ext_busuanzi" style="display: none;">
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+            </span>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="https://wakatime.com/" class="mobile-nav-link">Wakatime</a>
+  
+</nav>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox-min.css">
+  <script src="/fancybox/jquery.fancybox.pack-min.js"></script>
+
+
+<script src="/js/script-min.js"></script>
+<script src="/js/granule-min.js"></script>
+<script src="/js/require-min.js"></script>
+<script src="/js/category_demo-min.js"></script>
+
+
+
+<script async src="/js/canvas_index-min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105815046-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  </div>
+</body>
+</html>
